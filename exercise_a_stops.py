@@ -10,25 +10,31 @@ stops.insert(0, "Glasgow Queen St")
 stops.insert(4, "Polmont")
 
 #4. Print out the index position of "Linlithgow"
-print(stops[5])
+stops.index("Linlithgow")
 
 #5. Remove "Livingston" from the list using its name
 stops.remove("Livingston")
 
 #6. Delete "Cumbernauld" from the list by index
 stops.pop(2)
+#OR
+stops.pop(stops.index("Cumbernauld"))
 
 #7. Print the number of stops there are in the list
 num_stops = len(stops)
 print(num_stops)
 
 #8. Sort the list alphabetically
+# Permanent
 stops.sort()
+# Temporary
+print(sorted(stops))
 
 #9. Reverse the positions of the stops in the list
 stops.reverse()
-print(stops)
+stops.sort(reverse = True)
 
 #10 Print out all the stops using a for loop
+#"FOR thing IN list"
 for stop in stops:
     print(stop)
